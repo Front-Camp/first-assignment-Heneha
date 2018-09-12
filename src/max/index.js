@@ -8,6 +8,16 @@
 */
 const max = arr => {
   /* your logic here...*/
+  let maxValue = 0;
+  for (var i=0;i<arr.length;i++){
+  	if (arr[i] === Infinity || arr[i] === NaN){
+  		continue;
+  	}
+  	if (arr[i] > maxValue ) {
+  		maxValue = arr[i];
+  	}
+  }
+  return maxValue;
 };
 
 export default max;

@@ -12,6 +12,18 @@
  */
 const sumElements = arr => {
   /* your logic here...*/
+  return arr.reduce((prev,curr)=> {
+  	if (curr === NaN || curr === Infinity || curr === -Infinity) {
+  		return curr;
+  	} else if (typeof curr ==="string") {
+  		let num = parseInt(curr);
+        if (curr === NaN) {
+          return prev;
+        } else {
+          return prev + num;
+        }
+  	}
+  },0)
 };
 
 export default sumElements;
